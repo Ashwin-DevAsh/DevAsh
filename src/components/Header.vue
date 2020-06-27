@@ -159,18 +159,18 @@ export default {
     
 
    .header-container{
-       height: 100vh;
-       widows: 100vw;
+      height: 100vh;
+      width: 100vw;
    }
    .header-container img{
-      height: 100%;
-      width: 100%;
+     height: 100vh;
+      width: 100vw;
    }
    #image-cover{
        position: absolute;
        top: 0%;
-       width: 100%;
-       height: 100%;
+      height: 100vh;
+      width: 100vw;
        background-color:black;
        z-index: 2;
        opacity: 0.7;

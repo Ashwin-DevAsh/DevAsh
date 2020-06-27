@@ -122,6 +122,7 @@ export default {
      width: 100%;
      cursor: pointer;
      height: 100%;
+     overflow: hidden;
      display: grid;
      grid-template-columns: 30% 70%;
   }
