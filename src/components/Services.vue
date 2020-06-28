@@ -8,27 +8,19 @@
 
         <div class="service-container" >
      
-             <div
-               
-                v-for="(i,index) in services"
-                :key="index"
-             > 
+         
                 <div
                     class="service-holder"
+                     v-for="(i,index) in services"
+                    :key="index"
                 >
-                <div class="image-container">
-                    <img :src='i.image' alt="">
-                </div>
-                <div class="list-title-container">
-                     <h4>{{i.title}}</h4>
-                     <h6>{{i.subtitle}}</h6>
-                </div>
-                    
-                </div>
-               
-
-                
-
+                    <div class="image-container">
+                        <img :src='i.image' alt="">
+                    </div>
+                    <div class="list-title-container">
+                        <h4>{{i.title}}</h4>
+                        <h6>{{i.subtitle}}</h6>
+                    </div>
              </div>
 
             
@@ -122,8 +114,9 @@ export default {
      width: 100%;
      cursor: pointer;
      height: 100%;
-      background: #ffffff;
-box-shadow:  20px 20px 60px #d9d9d9, 
+     padding: 0%; 
+     background: #ffffff;
+     box-shadow:  20px 20px 60px #d9d9d9, 
              -20px -20px 60px #ffffff;
      overflow: hidden;
      display: grid;
@@ -139,18 +132,22 @@ box-shadow:  20px 20px 60px #d9d9d9,
 
    .image-container{
        display: flex;
+       height: 100%;
+       width: 100%;
        justify-content: center;
        align-items: center;
    }
 
    .image-container img{
-      width: 100%;
-      height: 90%;
+     max-width: 100%;
+    max-height: 90%;
       margin-left: 10px;
+      margin: auto;
       object-fit:scale-down;
    }
 
    .list-title-container{
+       object-fit: scale-down; 
        margin-left:20px;
        display: flex;
        flex-direction: column;
@@ -175,9 +172,9 @@ box-shadow:  20px 20px 60px #d9d9d9,
 
    }
 
-   @media (max-width: 650px) {
+   @media (max-width: 750px) {
       .service{
-            height: 200vh;
+            height: 165vh;
        }
 
       .service{
@@ -186,8 +183,8 @@ box-shadow:  20px 20px 60px #d9d9d9,
 
       .service-container{
         grid-template-columns: 90%;
-        row-gap: 20px;
-        grid-template-rows: 18% 18% 18% 18% 18% 18%;
+        row-gap: 25px;
+        grid-template-rows: 16% 16% 16% 16% 16% 16%;
       }
 
     .heading h1{
@@ -195,7 +192,20 @@ box-shadow:  20px 20px 60px #d9d9d9,
       width: 80%;
     }
 
+  
+
    }
+
+    @media (max-width: 650px){
+        .list-title-container h4{
+        font-size: 0.8rem;
+        font-weight: bold;
+        }
+        .list-title-container h6{
+        font-size: 0.6rem;
+        }
+    }
+   
 
  
 

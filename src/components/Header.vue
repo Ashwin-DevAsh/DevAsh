@@ -62,14 +62,14 @@
                   <h5  >Services</h5>
                  </div>
                  <div
-                    v-on:click="scroll(getWidth()<=650?3:2)"
+                    v-on:click="scroll(getWidth()<=750?2.65:2)"
                    :class="{selected:currentPage==3}"
                  >
                    <h5 >Portfolio</h5>
                  </div>
                  <div
                     :class="{selected:currentPage==4}"
-                     v-on:click="scroll(getWidth()<=650?4:3)"
+                     v-on:click="scroll(getWidth()<=750?3.65:3)"
                  >
                  <h5>Contact</h5>
                  </div>
@@ -268,11 +268,13 @@ export default {
        justify-content: center;
        align-items: flex-start;
        margin-left: 15px;
+
        height: 100%;
        margin-bottom: 2px;
    }
 
    .logo h4 , h6{
+       
        margin: 0%;
    }
 
@@ -326,6 +328,7 @@ export default {
        margin: 0%;
        font-size: 3rem;
    }
+   
     .title-container h4{
        color: white;
        opacity: 0.8;
