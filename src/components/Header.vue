@@ -427,7 +427,12 @@ export default {
      }
    }
 
+   
+
     @media (max-width: 600px) {
+     .hamburger{
+         pointer-events: none;
+     }
      .subTitle-container{
           width: 95%;
       }

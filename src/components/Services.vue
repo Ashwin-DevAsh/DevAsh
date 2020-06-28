@@ -124,10 +124,9 @@ export default {
   }
 
    .service-holder:hover{
-      cursor: pointer;
+     cursor: pointer;
      box-shadow:  50px 50px 100px #d9d9d9, 
              -50px -50px 100px #ffffff;
-    
    }
 
    .image-container{
@@ -164,7 +163,9 @@ export default {
        opacity: 0.6;
    }
 
-    @media (max-width: 1040px) {
+
+
+   @media (max-width: 1040px) {
       .service-container{
         grid-template-columns: 45% 45%;
         grid-template-rows: 25% 25% 25%;
@@ -197,6 +198,9 @@ export default {
    }
 
     @media (max-width: 650px){
+        .service-holder{
+            pointer-events: none;
+        }
         .list-title-container h4{
         font-size: 0.8rem;
         font-weight: bold;
