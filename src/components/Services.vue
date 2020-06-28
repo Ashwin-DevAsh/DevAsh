@@ -51,7 +51,7 @@ export default {
 
                 {
                     title:"Web Development",
-                    subtitle:"We work with the latest tech stacks to engineer front-end and back-end solutions, and do everything from single page applications to multi-tier services.",
+                    subtitle:"We work with the latest tech stacks to engineer front-end and back-end solutions.",
                     image:require("../assets/web.jpg")
                 },
                 {
@@ -122,6 +122,9 @@ export default {
      width: 100%;
      cursor: pointer;
      height: 100%;
+      background: #ffffff;
+box-shadow:  14px 14px 28px #d9d9d9, 
+             -14px -14px 28px #ffffff;
      overflow: hidden;
      display: grid;
      grid-template-columns: 30% 70%;
@@ -129,7 +132,9 @@ export default {
 
    .service-holder:hover{
       cursor: pointer;
-      box-shadow: 0 10px 20px rgba(0,0,0, 0.19), 0 6px 6px rgba(0,0,0,0.1);
+     box-shadow:  50px 50px 100px #d9d9d9, 
+             -50px -50px 100px #ffffff;
+    
    }
 
    .image-container{
@@ -141,6 +146,8 @@ export default {
    .image-container img{
       width: 100%;
       height: 90%;
+      margin-left: 10px;
+      object-fit:scale-down;
    }
 
    .list-title-container{

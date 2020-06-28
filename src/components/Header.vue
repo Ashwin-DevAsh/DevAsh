@@ -218,15 +218,26 @@ export default {
 
      .line{
         width: 30px;
-        height: 2.5px;
+        height: 2px;
         background: white;
-        margin: 5px;
+        margin: 3.5px;
+        
+    }
+
+     #line1{
+        width: 30px;
+    }
+     #line2{
+        width: 20px;
+    }
+     #line3{
+        width: 10px;
     }
 
 
     
     .hamburger{
-        display: none;;
+        display: none;
         right: 10px;
         position: absolute;
         cursor: pointer;
@@ -410,7 +421,10 @@ export default {
 
        
      .hamburger{
-        display: inline;
+        display: flex;
+        flex-direction:column ;
+        align-items: flex-end;
+        justify-content: center;
      }
    }
 
