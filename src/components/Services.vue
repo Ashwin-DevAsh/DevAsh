@@ -10,8 +10,8 @@
      
              <div
                
-                v-for="i in services"
-                :key="i"
+                v-for="(i,index) in services"
+                :key="index"
              > 
                 <div
                     class="service-holder"
