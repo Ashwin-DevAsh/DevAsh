@@ -123,8 +123,8 @@ export default {
      cursor: pointer;
      height: 100%;
       background: #ffffff;
-box-shadow:  14px 14px 28px #d9d9d9, 
-             -14px -14px 28px #ffffff;
+box-shadow:  20px 20px 60px #d9d9d9, 
+             -20px -20px 60px #ffffff;
      overflow: hidden;
      display: grid;
      grid-template-columns: 30% 70%;
@@ -177,7 +177,7 @@ box-shadow:  14px 14px 28px #d9d9d9,
 
    @media (max-width: 650px) {
       .service{
-            height: 120vh;
+            height: 200vh;
        }
 
       .service{
@@ -186,7 +186,7 @@ box-shadow:  14px 14px 28px #d9d9d9,
 
       .service-container{
         grid-template-columns: 90%;
-        row-gap: 12px;
+        row-gap: 20px;
         grid-template-rows: 18% 18% 18% 18% 18% 18%;
       }
 

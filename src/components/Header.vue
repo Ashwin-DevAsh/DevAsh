@@ -62,14 +62,14 @@
                   <h5  >Services</h5>
                  </div>
                  <div
-                    v-on:click="scroll(windowHeight<=650?2.5:2)"
+                    v-on:click="scroll(getWidth()<=650?3:2)"
                    :class="{selected:currentPage==3}"
                  >
                    <h5 >Portfolio</h5>
                  </div>
                  <div
                     :class="{selected:currentPage==4}"
-                     v-on:click="scroll(3)"
+                     v-on:click="scroll(getWidth()<=650?4:3)"
                  >
                  <h5>Contact</h5>
                  </div>
@@ -109,9 +109,6 @@ export default {
     mounted () {
        this.onScroll() 
        window.addEventListener('scroll', this.onScroll)
-         window.addEventListener('resize', () => {
-            this.windowHeight = window.innerHeight
-        })
     },
     beforeDestroy () {
        window.removeEventListener('scroll', this.onScroll)
@@ -128,7 +125,6 @@ export default {
             isScrolled:false,
             currentPage:1,
             isMenuOpen:false,
-            windowHeight:undefined
         }
     },
     methods:{
@@ -143,9 +139,9 @@ export default {
                let pageHeight = window.innerHeight;
             window.scrollTo(0,size*pageHeight-50)
            }
-           
-   
-          
+        },
+        getWidth(){
+            return window.innerWidth
         },
         menuOpen(){
             this.isMenuOpen=!this.isMenuOpen,
@@ -157,11 +153,11 @@ export default {
                      window.pageYOffset : 
                      (document.documentElement || document.body.parentNode || document.body).scrollTop;
             var section = document.body.scrollHeight/4
-            if(scrollTop>section*3-150){
+            if(scrollTop>section*2.7){
                  this.currentPage=4
-            }else if(scrollTop>section*2-150){
+            }else if(scrollTop>section*1.7){
                  this.currentPage=3
-            }else if(scrollTop>section*1-150){
+            }else if(scrollTop>section*0.7){
                  this.currentPage=2
             }else{
                  this.currentPage=1
