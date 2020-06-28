@@ -1,8 +1,26 @@
 <template>
     <div class="header-container" >
         
-       <img :src="backgroundImage" alt="">
-       <div id="image-cover" ></div>
+       <vue-particles
+        class="particles"
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="2"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="200"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
+      
 
        <nav
           class="navBar"
@@ -81,7 +99,13 @@
 </template>
 
 <script>
+import Vue from 'vue'
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
+
+
 export default {
+    
     mounted () {
        this.onScroll() 
        window.addEventListener('scroll', this.onScroll)
@@ -161,9 +185,12 @@ export default {
    .header-container{
       height: 100vh;
       width: 100vw;
+      background: linear-gradient(#000f14,#000f14,#001d27);
    }
-   .header-container img{
+   .particles{
      height: 100vh;
+     position: absolute;
+     z-index: 3;
       width: 100vw;
    }
    #image-cover{
@@ -353,6 +380,17 @@ export default {
            align-items: center;
            justify-content: center;
        }
+
+        .menu-container .selected{
+            color:  #ffc400;
+            border-bottom: solid 0.1px #202020;
+            
+        }
+
+         .menu-container .selected>h5{
+            color:  #ffc400;
+            
+        }
       
       
        #logo-container{
