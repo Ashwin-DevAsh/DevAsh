@@ -302,11 +302,15 @@ h6 {
 
 .title-container h1 {
   color: white;
-  opacity: 0.8;
+  opacity: 0;
+
+  animation-name: ani-title;
+  animation-delay: 0.5s;
+  animation-duration: 2s;
   margin: 0%;
+  animation-fill-mode: forwards;
   font-size: 3rem;
 }
-
 .title-container h4 {
   color: white;
   opacity: 0.8;
@@ -314,8 +318,36 @@ h6 {
 }
 .subTitle-container p {
   color: white;
-  opacity: 0.8;
+  opacity: 0;
   text-align: center;
+  animation: ani-subtitle;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ani-title {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes ani-subtitle {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  to {
+    opacity: 0.8;
+    transform: translateX(0%);
+  }
 }
 
 .subTitle-container {
