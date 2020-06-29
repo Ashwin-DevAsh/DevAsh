@@ -6,9 +6,14 @@
     </div>
 
     <div class="service-container">
-      <div class="service-holder" v-for="(i, index) in services" :key="index">
+      <div
+        class="service-holder"
+        :class="{'shake-animation':index==shakeThis}"
+        v-for="(i, index) in services"
+        :key="index"
+      >
         <div class="image-container">
-          <img :src="i.image" alt="" />
+          <img :src="i.image" alt />
         </div>
         <div class="list-title-container">
           <h4>{{ i.title }}</h4>
@@ -23,43 +28,60 @@
 <script>
 export default {
   name: "Services",
+  mounted() {
+    this.shake();
+  },
+  methods: {
+    shake() {
+      let that = this;
+      setInterval(function() {
+        that.shakeThis =
+          Math.floor(Math.random() * (that.services.length - 0 + 1)) + 0;
+        setTimeout(() => {
+          that.shakeThis = undefined;
+        }, 1000);
+      }, 5000);
+    }
+  },
   data() {
     return {
+      shakeThis: undefined,
+
       services: [
         {
           title: "App Development",
           subtitle:
             "We specialise in native and cross-platform consumer apps, creating exceptional digital experience at every touch point.",
-          image: require("../assets/app.jpg"),
+          image: require("../assets/app.svg")
         },
 
         {
           title: "Web Development",
           subtitle:
             "We work with the latest tech stacks to engineer front-end and back-end solutions.",
-          image: require("../assets/web.jpg"),
+          image: require("../assets/web.svg")
         },
         {
           title: "Software Development",
           subtitle:
             "We build frontline software solutions that enable enterprises to unlock innovation and make a difference in the tech world",
-          image: require("../assets/desktop.jpg"),
+          image: require("../assets/desktop.svg")
         },
         {
           title: "Cloud & DevOps",
           subtitle:
             "Our team creates flexible and agile environment using DevOps to meet business needs.",
-          image: require("../assets/cloud.jpg"),
+          image: require("../assets/cloud.svg")
         },
         {
           title: "Blockchain Solutions",
           subtitle:
             "Top-notch Blockchain developers, designers, and product owners - ready to build your product.",
-          image: require("../assets/eth.jpg"),
-        },
-      ],
+          image: require("../assets/eth.svg")
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
@@ -126,6 +148,49 @@ h5 {
   grid-template-columns: 30% 70%;
 }
 
+.shake-animation {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg) scale(1.05);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-5deg) scale(1.05);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(5deg) scale(1.05);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(5deg) scale(1.05);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(5deg) scale(1.05);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-5deg) scale(1.05);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg) scale(1.05);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-5deg) scale(1.05);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(5deg) scale(1.05);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg) scale(1.05);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-5deg) scale(1.05);
+  }
+}
+
 .image-container {
   display: flex;
   height: 100%;
@@ -136,7 +201,7 @@ h5 {
 }
 
 .image-container img {
-  max-width: 100%;
+  max-width: 90%;
   max-height: 90%;
   margin: auto;
   object-fit: scale-down;

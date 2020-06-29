@@ -17,8 +17,7 @@
       hoverMode="grab"
       :clickEffect="true"
       clickMode="push"
-    >
-    </vue-particles>
+    ></vue-particles>
 
     <div style="height:100%;display:flex;flex-direction:column-reverse">
       <div style="height:70px" class="page2"></div>
@@ -42,41 +41,27 @@
       </div>
 
       <div class="menu-container" :class="{ menuOpen: isMenuOpen }">
-        <div
-          v-on:click="scroll('.header-container')"
-          :class="{ selected: currentPage == 1 }"
-        >
+        <div v-on:click="scroll('.header-container')" :class="{ selected: currentPage == 1 }">
           <h5>Home</h5>
         </div>
-        <div
-          v-on:click="scroll('.page2')"
-          :class="{ selected: currentPage == 2 }"
-        >
+        <div v-on:click="scroll('.page2')" :class="{ selected: currentPage == 2 }">
           <h5>Services</h5>
         </div>
-        <div
-          v-on:click="scroll('.page3')"
-          :class="{ selected: currentPage == 3 }"
-        >
+        <div v-on:click="scroll('.page3')" :class="{ selected: currentPage == 3 }">
           <h5>Portfolio</h5>
         </div>
-        <div
-          :class="{ selected: currentPage == 4 }"
-          v-on:click="scroll('.page4')"
-        >
+        <div :class="{ selected: currentPage == 4 }" v-on:click="scroll('.page4')">
           <h5>Contact</h5>
         </div>
       </div>
     </nav>
-
     <div class="title-container">
-      <h1>
-        {{ mainTitle }}
-      </h1>
+      <h1>{{ mainTitle }}</h1>
 
       <div class="subTitle-container">
         <p>
-          Full-cycle <mark>{{ software }}</mark> &
+          Full-cycle
+          <mark>{{ software }}</mark> &
           <mark>{{ website }}</mark> development services designed to help your
           business grow
         </p>
@@ -109,7 +94,7 @@ export default {
       website: "< Website />",
       isScrolled: false,
       currentPage: 1,
-      isMenuOpen: false,
+      isMenuOpen: false
     };
   },
   methods: {
@@ -154,8 +139,8 @@ export default {
       } else {
         this.isScrolled = true;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -307,6 +292,8 @@ h6 {
   animation-name: ani-title;
   animation-delay: 0.5s;
   animation-duration: 2s;
+  transform: scale(0.5);
+
   margin: 0%;
   animation-fill-mode: forwards;
   font-size: 3rem;
@@ -321,8 +308,9 @@ h6 {
   opacity: 0;
   text-align: center;
   animation: ani-subtitle;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-delay: 1s;
+  transform: scale(0.5);
   animation-fill-mode: forwards;
 }
 
@@ -335,6 +323,7 @@ h6 {
   to {
     opacity: 0.8;
     transform: translateX(0%);
+    transform: scale(1.1);
   }
 }
 
@@ -347,6 +336,7 @@ h6 {
   to {
     opacity: 0.8;
     transform: translateX(0%);
+    transform: scale(1.1);
   }
 }
 
