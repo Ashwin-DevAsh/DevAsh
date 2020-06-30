@@ -20,16 +20,14 @@
     ></vue-particles>
 
     <div style="height:100%;display:flex;flex-direction:column-reverse">
-      <div style="height:70px" class="page2"></div>
+      <div style="height:20px" class="page2"></div>
     </div>
 
     <nav class="navBar" v-bind:class="{ scrolled: isScrolled }">
       <div id="logo-container">
         <div class="logo">
-          <img :src="logo" />
           <div class="logo-title">
             <h4>{{ title }}</h4>
-            <h6>{{ subTitle }}</h6>
           </div>
         </div>
 
@@ -146,12 +144,12 @@ export default {
 
 <style scoped>
 .header-container {
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
-  background: linear-gradient(#000f14, #000f14, #001d27);
+  background: linear-gradient(#5e56e9, #884bdf);
 }
 .particles {
-  height: 100vh;
+  height: 105vh;
   position: absolute;
   z-index: 3;
   width: 100vw;
@@ -215,9 +213,8 @@ export default {
   display: flex;
   align-items: center;
   border-radius: 60px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-  background-color: #ffc400;
-  margin-left: 20px;
+  font-size: 1.7rem;
+  margin-left: 40px;
 }
 
 .logo img {
@@ -239,6 +236,7 @@ export default {
 
 .logo h4,
 h6 {
+  color: white;
   margin: 0%;
 }
 
@@ -256,7 +254,7 @@ h6 {
 
 .menu-container h5 {
   display: flex;
-  opacity: 0.8;
+  opacity: 0.9;
   padding: 5px 0px;
   flex-direction: row;
   color: white;
@@ -264,7 +262,7 @@ h6 {
 }
 
 .menu-container .selected {
-  border-bottom: solid 0.5px #ffc400;
+  border-bottom: solid 1.5px #fb397d;
 }
 
 .menu-container :hover {
@@ -288,7 +286,7 @@ h6 {
 .title-container h1 {
   color: white;
   opacity: 0;
-
+  font-weight: bold;
   animation-name: ani-title;
   animation-delay: 0.5s;
   animation-duration: 2s;
@@ -321,7 +319,7 @@ h6 {
   }
 
   to {
-    opacity: 0.8;
+    opacity: 1;
     transform: translateX(0%);
     transform: scale(1.1);
   }
@@ -334,7 +332,7 @@ h6 {
   }
 
   to {
-    opacity: 0.8;
+    opacity: 1;
     transform: translateX(0%);
     transform: scale(1.1);
   }
@@ -345,13 +343,13 @@ h6 {
 }
 
 .scrolled {
-  background-color: rgba(0, 0, 0, 1);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  background: #884bdf;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04), 0 6px 6px rgba(0, 0, 0, 0.04);
 }
 
 mark {
   background: transparent;
-  color: #ffc400;
+  color: #fb397d;
 }
 
 @media (max-width: 1040px) {
@@ -370,33 +368,34 @@ mark {
     position: absolute;
     top: 0%;
     z-index: -1;
-    background-color: rgba(0, 0, 0, 1);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    padding-top: 80px;
-    transition: all 1s ease-out;
-    clip-path: circle(100px at 100% -50%);
+    padding-bottom: 15px;
+    background: #884bdf;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0);
+    padding-top: 70px;
+    transition: all 0.3s ease-out;
+    transform: translateY(-120%);
+    /* clip-path: circle(100px at 100% -50%); */
   }
 
+  .logo {
+    margin-left: 10px;
+  }
   .menuOpen {
-    clip-path: circle(1000px at 90% 10%);
+    transform: translateY(0%);
+
+    /* clip-path: circle(1000px at 90% 10%); */
   }
 
   .menu-container div {
     padding: 10px;
     width: 100%;
-    border-bottom: solid 0.1px #202020;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .menu-container .selected {
-    color: #ffc400;
-    border-bottom: solid 0.1px #202020;
-  }
-
-  .menu-container .selected > h5 {
-    color: #ffc400;
+    border-bottom: none;
   }
 
   #logo-container {

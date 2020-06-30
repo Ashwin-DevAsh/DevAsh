@@ -87,8 +87,8 @@ export default {
 
 <style scoped>
 .service {
+  margin-top: -80px;
   width: 100%;
-  background-color: #fafafa;
   display: grid;
 }
 
@@ -99,7 +99,6 @@ export default {
   height: 200px;
   flex-direction: column;
   align-items: center;
-  background-color: #fafafa;
   justify-content: center;
   text-align: center;
 }
@@ -108,7 +107,7 @@ export default {
   height: 2px;
   width: 60px;
   margin-top: 20px;
-  background-color: #001d27;
+  background-color: #fb397d;
 }
 
 .heading h1,
@@ -123,7 +122,6 @@ h5 {
 
 .service-container {
   height: 100%;
-  background-color: #fafafa;
   display: grid;
   grid-template-columns: 30% 30% 30%;
   justify-content: space-around;
@@ -157,37 +155,37 @@ h5 {
 
 @keyframes shake {
   0% {
-    transform: translate(1px, 1px) rotate(0deg) scale(1.05);
+    transform: translate(1px, 1px) rotate(0deg);
   }
   10% {
-    transform: translate(-1px, -2px) rotate(-5deg) scale(1.05);
+    transform: translate(-1px, -2px) rotate(-5deg);
   }
   20% {
-    transform: translate(-3px, 0px) rotate(5deg) scale(1.05);
+    transform: translate(-3px, 0px) rotate(5deg);
   }
   30% {
-    transform: translate(3px, 2px) rotate(5deg) scale(1.05);
+    transform: translate(3px, 2px) rotate(5deg);
   }
   40% {
-    transform: translate(1px, -1px) rotate(5deg) scale(1.05);
+    transform: translate(1px, -1px) rotate(5deg);
   }
   50% {
-    transform: translate(-1px, 2px) rotate(-5deg) scale(1.05);
+    transform: translate(-1px, 2px) rotate(-5deg);
   }
   60% {
-    transform: translate(-3px, 1px) rotate(0deg) scale(1.05);
+    transform: translate(-3px, 1px) rotate(0deg);
   }
   70% {
-    transform: translate(3px, 1px) rotate(-5deg) scale(1.05);
+    transform: translate(3px, 1px) rotate(-5deg);
   }
   80% {
-    transform: translate(-1px, -1px) rotate(5deg) scale(1.05);
+    transform: translate(-1px, -1px) rotate(5deg);
   }
   90% {
-    transform: translate(1px, 2px) rotate(0deg) scale(1.05);
+    transform: translate(1px, 2px) rotate(0deg);
   }
   100% {
-    transform: translate(1px, -2px) rotate(-5deg) scale(1.05);
+    transform: translate(1px, -2px) rotate(-5deg);
   }
 }
 
