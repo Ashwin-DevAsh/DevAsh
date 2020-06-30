@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="homepage">
     <Header></Header>
-    <div>
+    <div style="margin-top:-10dp">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#884bdf"
@@ -29,4 +29,10 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+</style>

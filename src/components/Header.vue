@@ -53,16 +53,13 @@
         </div>
       </div>
     </nav>
-    <div class="title-container">
-      <h1>{{ mainTitle }}</h1>
 
-      <div class="subTitle-container">
-        <p>
-          Full-cycle
-          <mark>{{ software }}</mark> &
-          <mark>{{ website }}</mark> development services designed to help your
-          business grow
-        </p>
+    <div class="main-container">
+      <div class="title-container">
+        <h1>{{ mainTitle }}</h1>
+      </div>
+      <div class="image-container">
+        <img src="../assets/dev.svg" alt />
       </div>
     </div>
   </div>
@@ -87,8 +84,8 @@ export default {
       logo: require("../assets/fire-512.png"),
       title: "DevAsh",
       subTitle: "Development & Solutions",
-      mainTitle: "Hey There !",
-      software: "{ Software }",
+      mainTitle: "freelancing service",
+      software: "{  }",
       website: "< Website />",
       isScrolled: false,
       currentPage: 1,
@@ -145,20 +142,22 @@ export default {
 <style scoped>
 .header-container {
   height: 95vh;
-  width: 100vw;
+  margin: 0%;
+  width: 100%;
+
   background: linear-gradient(#5e56e9, #884bdf);
 }
 .particles {
-  height: 105vh;
+  height: 90vh;
   position: absolute;
-  z-index: 3;
-  width: 100vw;
+  z-index: 0;
+  width: 100%;
 }
 #image-cover {
   position: absolute;
   top: 0%;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: black;
   z-index: 2;
   opacity: 0.7;
@@ -213,8 +212,9 @@ export default {
   display: flex;
   align-items: center;
   border-radius: 60px;
-  font-size: 1.7rem;
-  margin-left: 40px;
+  font-size: 1.4rem;
+  background-color: #fb397d;
+  margin-left: 60px;
 }
 
 .logo img {
@@ -227,11 +227,9 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  margin-left: 15px;
-
+  align-items: center;
+  width: 100%;
   height: 100%;
-  margin-bottom: 2px;
 }
 
 .logo h4,
@@ -241,7 +239,6 @@ h6 {
 }
 
 .logo h6 {
-  margin: 0%;
   font-size: 8px;
   opacity: 0.8;
 }
@@ -270,46 +267,51 @@ h6 {
   opacity: 1;
 }
 
-.title-container {
-  width: 100%;
-  height: 100%;
-  text-align: center;
+.image-container img {
+  max-width: 400px;
+  position: relative;
+  object-fit: scale-down;
   z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  top: 0%;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100%;
   position: absolute;
+  top: 0%;
+  justify-content: space-between;
+  align-self: flex-end;
+  justify-self: flex-end;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-items: center;
+}
+
+.title-container {
+  margin-left: 60px;
+  max-width: 500px;
+  grid-row: 2/3;
+}
+
+.image-container {
+  grid-row: 3/4;
+  grid-column: 2/3;
+  animation-fill-mode: forwards;
+  align-self: center;
+  justify-self: center;
 }
 
 .title-container h1 {
-  color: white;
-  opacity: 0;
-  font-weight: bold;
-  animation-name: ani-title;
-  animation-delay: 0.5s;
-  animation-duration: 2s;
-  transform: scale(0.5);
-
+  font-size: 4rem;
   margin: 0%;
-  animation-fill-mode: forwards;
-  font-size: 3rem;
-}
-.title-container h4 {
   color: white;
-  opacity: 0.8;
-  font-size: 2rem;
+  animation-name: ani-title;
 }
-.subTitle-container p {
-  color: white;
+
+.title-container p {
   opacity: 0;
-  text-align: center;
-  animation: ani-subtitle;
-  animation-duration: 2s;
-  animation-delay: 1s;
-  transform: scale(0.5);
-  animation-fill-mode: forwards;
+  color: white;
 }
 
 @keyframes ani-title {
@@ -317,29 +319,20 @@ h6 {
     opacity: 0;
     transform: translateX(-100%);
   }
-
   to {
     opacity: 1;
     transform: translateX(0%);
-    transform: scale(1.1);
   }
 }
-
 @keyframes ani-subtitle {
   from {
     opacity: 0;
     transform: translateX(100%);
   }
-
   to {
     opacity: 1;
     transform: translateX(0%);
-    transform: scale(1.1);
   }
-}
-
-.subTitle-container {
-  width: 500px;
 }
 
 .scrolled {
@@ -352,13 +345,22 @@ mark {
   color: #fb397d;
 }
 
-@media (max-width: 1040px) {
+@media (max-width: 1140px) {
   .navBar {
     grid-template-columns: 50% 50%;
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 850px) {
+  .title-container {
+    grid-column: 1/4;
+    margin-bottom: 100px;
+  }
+
+  .image-container img {
+    max-width: 300px;
+  }
+
   .menu-container {
     display: flex;
     flex-direction: column;
@@ -372,18 +374,20 @@ mark {
     background: #884bdf;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0);
     padding-top: 70px;
-    transition: all 0.3s ease-out;
-    transform: translateY(-120%);
-    /* clip-path: circle(100px at 100% -50%); */
+    transition: all 0.5s ease-out;
+    clip-path: circle(100px at 100% -50%);
   }
 
   .logo {
-    margin-left: 10px;
+    margin-left: 20px;
   }
-  .menuOpen {
-    transform: translateY(0%);
 
-    /* clip-path: circle(1000px at 90% 10%); */
+  .title-container {
+    margin-left: 20px;
+  }
+
+  .menuOpen {
+    clip-path: circle(1000px at 90% 10%);
   }
 
   .menu-container div {
@@ -420,12 +424,11 @@ mark {
 }
 
 @media (max-width: 600px) {
-  .subTitle-container {
-    width: 95%;
-  }
-
   .title-container h1 {
-    font-size: 2rem;
+    font-size: 3.3rem;
+  }
+  .image-container {
+    grid-column: 1/3;
   }
 }
 </style>

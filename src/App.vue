@@ -19,8 +19,8 @@ html {
 }
 
 body {
-  margin: 0%;
   overflow-x: hidden;
+  margin: 0%;
   font-family: "Poppins", sans-serif;
 }
 

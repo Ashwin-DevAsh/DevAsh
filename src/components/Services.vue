@@ -29,7 +29,7 @@
 export default {
   name: "Services",
   mounted() {
-    this.shake();
+    // this.shake();
   },
   methods: {
     shake() {
@@ -89,6 +89,7 @@ export default {
 .service {
   margin-top: -80px;
   width: 100%;
+
   display: grid;
 }
 
@@ -232,6 +233,9 @@ h6 {
 }
 
 @media (max-width: 750px) {
+  .service {
+    margin-top: -50px;
+  }
   .service-container {
     grid-template-columns: 90%;
     row-gap: 25px;
