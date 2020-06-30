@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <div style="position:relative;bottom:70px" class="page3"></div>
+    <div style="position:relative;bottom:-70px" class="page3"></div>
   </div>
 </template>
 

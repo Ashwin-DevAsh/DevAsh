@@ -20,12 +20,12 @@
     ></vue-particles>
 
     <div style="height:100%;display:flex;flex-direction:column-reverse">
-      <div style="height:20px" class="page2"></div>
+      <div style="height:20px;margin-bottom:-170px" class="page2"></div>
     </div>
 
     <nav class="navBar" v-bind:class="{ scrolled: isScrolled }">
       <div id="logo-container">
-        <div class="logo">
+        <div class="logo" :class="{'shake-animation':shakeThis}">
           <div class="logo-title">
             <h4>{{ title }}</h4>
           </div>
@@ -57,6 +57,7 @@
     <div class="main-container">
       <div class="title-container">
         <h1>{{ mainTitle }}</h1>
+        <div class="underline"></div>
       </div>
       <div class="image-container">
         <img src="../assets/dev.svg" alt />
@@ -74,6 +75,7 @@ export default {
   mounted() {
     this.onScroll();
     window.addEventListener("scroll", this.onScroll);
+    this.shake();
   },
   beforeDestroy() {
     window.removeEventListener("scroll", this.onScroll);
@@ -89,7 +91,8 @@ export default {
       website: "< Website />",
       isScrolled: false,
       currentPage: 1,
-      isMenuOpen: false
+      isMenuOpen: false,
+      shakeThis: false
     };
   },
   methods: {
@@ -103,12 +106,15 @@ export default {
         document.querySelector(page).scrollIntoView();
       }
     },
+
     getWidth() {
       return window.innerWidth;
     },
+
     menuOpen() {
       (this.isMenuOpen = !this.isMenuOpen), console.log(this.isMenuOpen);
     },
+
     onScroll() {
       var scrollTop =
         window.pageYOffset !== undefined
@@ -134,6 +140,16 @@ export default {
       } else {
         this.isScrolled = true;
       }
+    },
+
+    shake() {
+      let that = this;
+      setInterval(function() {
+        that.shakeThis = true;
+        setTimeout(() => {
+          that.shakeThis = undefined;
+        }, 1000);
+      }, 5000);
     }
   }
 };
@@ -144,7 +160,6 @@ export default {
   height: 95vh;
   margin: 0%;
   width: 100%;
-
   background: linear-gradient(#5e56e9, #884bdf);
 }
 .particles {
@@ -161,6 +176,21 @@ export default {
   background-color: black;
   z-index: 2;
   opacity: 0.7;
+}
+
+.underline {
+  height: 2px;
+  width: 60px;
+  margin-top: 40px;
+  margin-left: 5px;
+  background-color: #fb397d;
+  animation-delay: 2s;
+  opacity: 0;
+  transform: scale(0.7);
+  animation: animation-title;
+  animation-delay: 2s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
 }
 
 .navBar {
@@ -286,12 +316,20 @@ h6 {
 @keyframes image-animation {
   from {
     opacity: 0;
+    transform: translateX(100%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
+  /* from {
+    opacity: 0;
     transform: translateY(50%) scale(0.7);
   }
   to {
     opacity: 1;
     transform: translateY(0%) scale(1);
-  }
+  } */
 }
 
 .main-container {
@@ -326,33 +364,28 @@ h6 {
   font-size: 4rem;
   margin: 0%;
   color: white;
-  animation-name: ani-title;
+  animation-name: animation-title;
+  animation-delay: 1s;
+  transform: scale(0.7);
+  animation-duration: 1s;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animation-title {
+  from {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
 }
 
 .title-container p {
   opacity: 0;
   color: white;
-}
-
-@keyframes ani-title {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
-@keyframes ani-subtitle {
-  from {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
 }
 
 .scrolled {
@@ -374,7 +407,7 @@ mark {
 @media (max-width: 850px) {
   .title-container {
     grid-column: 1/4;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
   }
 
   .image-container img {
@@ -420,6 +453,13 @@ mark {
 
   .menu-container .selected {
     border-bottom: none;
+    color: #fb397d;
+  }
+
+  .menu-container .selected h5 {
+    opacity: 1;
+    font-weight: bolder;
+    color: #fb397d;
   }
 
   #logo-container {
@@ -444,11 +484,51 @@ mark {
 }
 
 @media (max-width: 600px) {
+  .title-container {
+    margin-bottom: 120px;
+  }
+
   .title-container h1 {
     font-size: 3.3rem;
   }
   .image-container {
     grid-column: 1/3;
+
+    justify-self: center;
+  }
+
+  .image-container img {
+    width: 270px;
+  }
+}
+
+.shake-animation {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+  /* When the animation is finished, start again */
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
 </style>
