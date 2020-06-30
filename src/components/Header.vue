@@ -211,10 +211,12 @@ export default {
   width: 190px;
   display: flex;
   align-items: center;
-  border-radius: 60px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 30px;
   font-size: 1.4rem;
   background-color: #fb397d;
   margin-left: 60px;
+  box-shadow: inset 5px 5px 10px #f33779, inset -5px -5px 10px #ff3b81;
 }
 
 .logo img {
@@ -270,8 +272,26 @@ h6 {
 .image-container img {
   max-width: 400px;
   position: relative;
+  opacity: 0px;
+  transform: scale(0.7);
+  animation-fill-mode: forwards;
+  animation-name: image-animation;
+  animation-delay: 0.3s;
+  opacity: 0;
+  animation-duration: 1s;
   object-fit: scale-down;
   z-index: 2;
+}
+
+@keyframes image-animation {
+  from {
+    opacity: 0;
+    transform: translateY(50%) scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%) scale(1);
+  }
 }
 
 .main-container {

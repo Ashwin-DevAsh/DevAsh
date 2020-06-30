@@ -1,7 +1,7 @@
 <template>
   <div class="homepage">
     <Header></Header>
-    <div style="margin-top:-10dp">
+    <div style="margin-top:-1px">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#884bdf"
