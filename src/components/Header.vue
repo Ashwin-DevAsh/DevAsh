@@ -25,7 +25,7 @@
 
     <nav class="navBar" v-bind:class="{ scrolled: isScrolled }">
       <div id="logo-container">
-        <div class="logo" :class="{'shake-animation':shakeThis}">
+        <div class="logo" :class="{ 'shake-animation': shakeThis }">
           <div class="logo-title">
             <h4>{{ title }}</h4>
           </div>
@@ -39,16 +39,28 @@
       </div>
 
       <div class="menu-container" :class="{ menuOpen: isMenuOpen }">
-        <div v-on:click="scroll('.header-container')" :class="{ selected: currentPage == 1 }">
+        <div
+          v-on:click="scroll('.header-container')"
+          :class="{ selected: currentPage == 1 }"
+        >
           <h5>Home</h5>
         </div>
-        <div v-on:click="scroll('.page2')" :class="{ selected: currentPage == 2 }">
+        <div
+          v-on:click="scroll('.page2')"
+          :class="{ selected: currentPage == 2 }"
+        >
           <h5>Services</h5>
         </div>
-        <div v-on:click="scroll('.page3')" :class="{ selected: currentPage == 3 }">
+        <div
+          v-on:click="scroll('.page3')"
+          :class="{ selected: currentPage == 3 }"
+        >
           <h5>Portfolio</h5>
         </div>
-        <div :class="{ selected: currentPage == 4 }" v-on:click="scroll('.page4')">
+        <div
+          :class="{ selected: currentPage == 4 }"
+          v-on:click="scroll('.page4')"
+        >
           <h5>Contact</h5>
         </div>
       </div>
@@ -92,7 +104,7 @@ export default {
       isScrolled: false,
       currentPage: 1,
       isMenuOpen: false,
-      shakeThis: false
+      shakeThis: false,
     };
   },
   methods: {
@@ -150,13 +162,14 @@ export default {
           that.shakeThis = undefined;
         }, 1000);
       }, 5000);
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style scoped>
 .header-container {
+  overflow-x: hidden;
   height: 95vh;
   margin: 0%;
   width: 100%;
@@ -344,6 +357,7 @@ h6 {
   grid-template-columns: 50% 50%;
   grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
+  overflow-x: hidden;
 }
 
 .title-container {
@@ -505,6 +519,10 @@ mark {
 @media (max-width: 450px) {
   .image-container {
     display: none;
+  }
+
+  .title-container h1 {
+    font-size: 3rem;
   }
 }
 
