@@ -31,12 +31,10 @@
 </template>
 
 <script>
-import { Carousel3d, Slide } from "vue-carousel-3d";
-
 export default {
   components: {
     Carousel3d,
-    Slide,
+    Slide
   },
 
   mounted() {
@@ -50,10 +48,10 @@ export default {
         "https://i.ya-webdesign.com/images/android-phone-png-6.png",
         "https://i.ya-webdesign.com/images/android-phone-png-6.png",
         "https://i.ya-webdesign.com/images/android-phone-png-6.png",
-        "https://i.ya-webdesign.com/images/android-phone-png-6.png",
-      ],
+        "https://i.ya-webdesign.com/images/android-phone-png-6.png"
+      ]
     };
-  },
+  }
 };
 </script>
 
