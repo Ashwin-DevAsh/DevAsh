@@ -20,7 +20,7 @@
     ></vue-particles>
 
     <div style="height:100%;display:flex;flex-direction:column-reverse">
-      <div style="height:20px;margin-bottom:-170px" class="page2"></div>
+      <div style="height:20px;" class="page2"></div>
     </div>
 
     <nav class="navBar" v-bind:class="{ scrolled: isScrolled }">
@@ -499,6 +499,12 @@ mark {
 
   .image-container img {
     width: 270px;
+  }
+}
+
+@media (max-width: 450px) {
+  .image-container {
+    display: none;
   }
 }
 
