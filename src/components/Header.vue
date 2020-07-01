@@ -94,8 +94,6 @@ export default {
   },
   data() {
     return {
-      backgroundImage: require("../assets/background.jpg"),
-      logo: require("../assets/fire-512.png"),
       title: "DevAsh",
       subTitle: "Development & Solutions",
       mainTitle: "freelancing service",

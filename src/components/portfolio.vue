@@ -297,6 +297,7 @@ a {
     justify-content: center;
   }
   .app-image {
+    width: none;
     margin-left: 0px;
     max-width: 400px;
     object-fit: scale-down;
@@ -319,7 +320,7 @@ a {
 
 @media (max-width: 610px) {
   .title-container {
-    margin-right: 0px;
+    margin-right: 10%;
   }
   .title h1 {
     font-size: 2rem;
@@ -327,9 +328,12 @@ a {
   .app-image {
     width: none;
     height: none;
-    max-height: 400px;
-    max-width: 400px;
+    max-height: 300px;
+    max-width: 90vh;
     object-fit: scale-down;
+  }
+  .images {
+    overflow: hidden;
   }
 }
 
