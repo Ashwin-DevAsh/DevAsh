@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg style=" background: #ffffff;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#884bdf"
         fill-opacity="1"
@@ -49,7 +49,7 @@
     </div>
 
     <div class="footer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <svg xmlns="http://www.w3.org/2000/svg" style="background: #ffffff;" viewBox="0 0 1440 320">
         <path
           fill="#5e56e9"
           fill-opacity="1"
@@ -57,6 +57,7 @@
         />
       </svg>
     </div>
+    <div class="page4"></div>
   </div>
 </template>
 
@@ -72,7 +73,7 @@ export default {
     },
     prev() {
       if (this.current > 0) this.current -= 1;
-    },
+    }
   },
 
   mounted() {
@@ -87,41 +88,41 @@ export default {
           image: require("../assets/portfolioImages/farmtohome.png"),
           title: "Farm To Home",
           subTitle:
-            "A hybrid app to connect farmers and a consumers directly with out a middle men. developed with a flutter",
-          link: "https://github.com/Ashwin-DevAsh",
+            "A hybrid app to connect farmers and a consumers directly with out a middle men. helps farmers to sell their agricultural goods",
+          link: "https://github.com/Ashwin-DevAsh"
         },
         {
           image: require("../assets/portfolioImages/recwallet.png"),
           title: "Rec Wallet",
           subTitle:
             "Blockchain based cryptocurrency app build on top of our own private ledger system.",
-          link: "https://github.com/Ashwin-DevAsh/Rec-Wallet-Client.git",
+          link: "https://github.com/Ashwin-DevAsh/Rec-Wallet-Client.git"
         },
 
         {
           image: require("../assets/portfolioImages/sway.png"),
           title: "Sway",
           subTitle:
-            "A fully functional kiosk solution for a enterprise. developed with a native tech stake",
-          link: "https://github.com/Ashwin-DevAsh",
+            "A fully functional kiosk solution for a enterprise which enables to access a client devices remotely",
+          link: "https://github.com/Ashwin-DevAsh"
         },
         {
           image: require("../assets/portfolioImages/rm.png"),
           title: "R M Traders",
           subTitle:
-            "It is an Admin app to maintain a agricultural and financial accounts. developed with a React native",
-          link: "https://github.com/Git-Ashwin/R_M_Traders.git",
+            "an Admin app to maintain a agricultural and financial accounts to make their life easier",
+          link: "https://github.com/Git-Ashwin/R_M_Traders.git"
         },
         {
           image: require("../assets/portfolioImages/rec.png"),
           title: "Rec Mech",
           subTitle:
-            "App to maintain a library stokcks and student activites. developed by using a flutter and firebase",
-          link: "https://github.com/Git-Ashwin/recmechlib.git",
-        },
-      ],
+            "App to maintain a library stokcks with simple qr scane and also helps to monitor student activites",
+          link: "https://github.com/Git-Ashwin/recmechlib.git"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
@@ -262,7 +263,6 @@ a {
   margin-left: 20px;
 }
 .footer {
-  z-index: -10;
   margin-top: -10px;
 }
 

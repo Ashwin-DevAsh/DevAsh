@@ -1,7 +1,8 @@
 <template>
   <div class="homepage">
     <Header></Header>
-    <div style="margin-top:-1px">
+
+    <div style="margin-top:-1px;background:#ffffff">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#884bdf"
@@ -10,9 +11,11 @@
         />
       </svg>
     </div>
+
     <Services></Services>
     <Portfolio></Portfolio>
-    <div style="height:100vh" class="page4"></div>
+
+    <Contact />
   </div>
 </template>
 
@@ -20,12 +23,14 @@
 import Header from "../components/Header";
 import Portfolio from "../components/portfolio";
 import Services from "../components/Services";
+import Contact from "../components/contact";
 export default {
   name: "Homepage",
   components: {
     Header,
     Services,
-    Portfolio
+    Portfolio,
+    Contact
   }
 };
 </script>

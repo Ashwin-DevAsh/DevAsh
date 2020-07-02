@@ -89,7 +89,7 @@ export default {
 .service {
   margin-top: -80px;
   width: 100%;
-
+  background: #ffffff;
   display: grid;
 }
 
@@ -127,7 +127,7 @@ h5 {
   grid-template-columns: 30% 30% 30%;
   justify-content: space-around;
   row-gap: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 150px;
   grid-auto-rows: 180px;
 }
 
