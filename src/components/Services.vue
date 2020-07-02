@@ -89,7 +89,6 @@ export default {
 .service {
   margin-top: -80px;
   width: 100%;
-  background: #ffffff;
   display: grid;
 }
 
@@ -116,6 +115,9 @@ h5 {
   z-index: 2;
   margin: 0%;
 }
+.heading h1 {
+  font-size: 2.5rem;
+}
 .heading h5 {
   margin-top: 10px;
   opacity: 0.4;
@@ -127,7 +129,7 @@ h5 {
   grid-template-columns: 30% 30% 30%;
   justify-content: space-around;
   row-gap: 50px;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   grid-auto-rows: 180px;
 }
 
@@ -242,7 +244,7 @@ h6 {
   }
 
   .heading h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: 80%;
   }
 }

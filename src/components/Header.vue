@@ -49,7 +49,10 @@
         <div v-on:click="scroll('.page3')" :class="{ selected: currentPage == 3 }">
           <h5>Portfolio</h5>
         </div>
-        <div :class="{ selected: currentPage == 4 }" v-on:click="scroll('.page4')">
+        <div v-on:click="scroll('.page4')" :class="{ selected: currentPage == 4 }">
+          <h5>About</h5>
+        </div>
+        <div v-on:click="scroll('.page5')" :class="{ selected: currentPage == 5 }">
           <h5>Contact</h5>
         </div>
       </div>
@@ -124,8 +127,10 @@ export default {
               document.body.parentNode ||
               document.body
             ).scrollTop;
-      var section = document.body.scrollHeight / 4;
-      if (scrollTop > section * 2.7) {
+      var section = document.body.scrollHeight / 5;
+      if (scrollTop > section * 3.7) {
+        this.currentPage = 5;
+      } else if (scrollTop > section * 2.7) {
         this.currentPage = 4;
       } else if (scrollTop > section * 1.7) {
         this.currentPage = 3;
@@ -160,7 +165,6 @@ export default {
   overflow-x: hidden;
   height: 95vh;
   margin: 0%;
-
   width: 100%;
   background: linear-gradient(#5e56e9, #884bdf);
 }
@@ -400,13 +404,25 @@ mark {
   color: #fb397d;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 1400px) {
+  .navBar {
+    grid-template-columns: 55% 45%;
+  }
+}
+
+@media (max-width: 1200px) {
   .navBar {
     grid-template-columns: 50% 50%;
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1100px) {
+  .navBar {
+    grid-template-columns: 45% 55%;
+  }
+}
+
+@media (max-width: 950px) {
   .title-container {
     grid-column: 1/4;
     margin-bottom: 80px;
@@ -429,7 +445,7 @@ mark {
     background: #884bdf;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0);
     padding-top: 70px;
-    transition: all 0.5s ease-out;
+    transition: all 0.8s ease-out;
     clip-path: circle(100px at 100% -50%);
     font-size: 1.3rem;
   }

@@ -1,6 +1,6 @@
 <template>
   <div class="portfolio">
-    <svg style=" background: #ffffff;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
       <path
         fill="#884bdf"
         fill-opacity="1"
@@ -49,7 +49,7 @@
     </div>
 
     <div class="footer">
-      <svg xmlns="http://www.w3.org/2000/svg" style="background: #ffffff;" viewBox="0 0 1440 320">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#5e56e9"
           fill-opacity="1"
@@ -57,7 +57,7 @@
         />
       </svg>
     </div>
-    <div class="page4"></div>
+    <div class="page4" style="height:90px"></div>
   </div>
 </template>
 

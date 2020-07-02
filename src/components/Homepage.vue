@@ -2,7 +2,7 @@
   <div class="homepage">
     <Header></Header>
 
-    <div style="margin-top:-1px;background:#ffffff">
+    <div style="margin-top:-1px;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#884bdf"
@@ -14,7 +14,7 @@
 
     <Services></Services>
     <Portfolio></Portfolio>
-
+    <About />
     <Contact />
   </div>
 </template>
@@ -23,6 +23,7 @@
 import Header from "../components/Header";
 import Portfolio from "../components/portfolio";
 import Services from "../components/Services";
+import About from "../components/About";
 import Contact from "../components/contact";
 export default {
   name: "Homepage",
@@ -30,6 +31,7 @@ export default {
     Header,
     Services,
     Portfolio,
+    About,
     Contact
   }
 };
