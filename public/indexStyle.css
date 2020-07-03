@@ -1,0 +1,22 @@
+.spiner {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spiner img {
+  height: 100px;
+  -webkit-animation: rotation 2s infinite linear;
+  width: 100px;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
