@@ -34,7 +34,7 @@
                 <h1>{{ i.title }}</h1>
                 <p>{{ i.subTitle }}</p>
                 <div class="links">
-                  <a :href="i.link">
+                  <a :href="i.link" target="_blank">
                     <div class="github">
                       <img src="../assets/github.svg" alt />
                       <h5>Github</h5>

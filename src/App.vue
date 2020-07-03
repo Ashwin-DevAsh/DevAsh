@@ -1,15 +1,28 @@
 <template>
-  <Homepage></Homepage>
+  <router-view></router-view>
 </template>
 
 <script>
 import Homepage from "./components/Homepage";
+import Vue from "vue";
+import VueRouter from "vue-router";
+
+Vue.use(VueRouter);
+
+const routes = [
+  { path: "/", component: Homepage },
+  { path: "/bar", component: { template: "<h1>hello</h1>" } },
+  { path: "*", component: Homepage },
+];
+
+const router = new VueRouter({
+  routes,
+  mode: "history",
+});
 
 export default {
   name: "App",
-  components: {
-    Homepage
-  }
+  router,
 };
 </script>
 

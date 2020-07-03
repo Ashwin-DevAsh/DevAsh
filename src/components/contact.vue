@@ -18,7 +18,7 @@
       <h2>Living, learning, & leveling up one day at a time.</h2>
       <div class="social-links">
         <div class="links" v-for="(i,index) in socialLinks" :key="index">
-          <a :href="i.link">
+          <a :href="i.link" target="_blank">
             <img :src="i.image" />
           </a>
         </div>
