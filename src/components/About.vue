@@ -1,11 +1,14 @@
 <template>
   <div class="about">
     <div class="content">
-      <h1>Hi, I’m Ashwin</h1>
+      <h1>
+        Hi, I’m
+        <mark>Ashwin</mark>
+      </h1>
       <div class="image">
         <img :src="myImage" />
       </div>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt expedita tenetur cupiditate? Soluta sint numquam porro ullam fuga libero dicta repellat dolor, maxime nobis ab impedit consequatur assumenda, distinctio consectetur.</p>
+      <p>Since beginning my journey as a freelance designer nearly 2 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use.</p>
       <div class="underline"></div>
     </div>
   </div>
@@ -46,6 +49,7 @@ export default {
 
 .content h1 {
   font-size: 3rem;
+  cursor: pointer;
 }
 
 .underline {
@@ -53,6 +57,11 @@ export default {
   width: 60px;
   margin-top: 60px;
   background-color: #fb397d;
+}
+
+mark {
+  background: transparent;
+  color: black;
 }
 
 .image img {
