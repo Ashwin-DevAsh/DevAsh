@@ -44,7 +44,7 @@ export default {
         },
         {
           image: require("../assets/social/whatsapp.svg"),
-          link: "https://wa.me/9551574355?text=''"
+          link: "https://wa.me/919551574355"
         },
         {
           image: require("../assets/github.svg"),

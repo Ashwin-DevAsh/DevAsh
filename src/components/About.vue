@@ -8,7 +8,7 @@
       <div class="image">
         <img :src="myImage" />
       </div>
-      <p>Since beginning my journey as a freelance designer nearly 2 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use.</p>
+      <p>Since beginning my journey as a freelance developer nearly 2 years ago, I've done remote work for agencies, consulted for startups, and collaborated with talented people to create digital products for both business and consumer use.</p>
       <div class="underline"></div>
     </div>
   </div>
@@ -70,7 +70,7 @@ mark {
   overflow: hidden;
   margin: 50px 0px;
   border-radius: 50%;
-
+  cursor: pointer;
   padding: 5px;
   box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
 }
