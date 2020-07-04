@@ -117,7 +117,7 @@ export default {
           image: require("../assets/portfolioImages/rec.png"),
           title: "Rec Mech",
           subTitle:
-            "App to maintain a library stokcks with simple qr scane and also helps to monitor student activites",
+            "App to maintain a library stocks with simple qr scane and also helps to monitor student activites",
           link: "https://github.com/Git-Ashwin/recmechlib.git"
         }
       ]
