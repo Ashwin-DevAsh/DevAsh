@@ -88,7 +88,7 @@ export default {
           image: require("../assets/portfolioImages/farmtohome.png"),
           title: "Farm To Home",
           subTitle:
-            "A hybrid app to connect farmers and a consumers directly with out a middle men. helps farmers to sell their agricultural goods",
+            "Aa app to connect farmers and a consumers directly with out a middle men and helps farmers to sell their agricultural goods",
           link: "https://github.com/Ashwin-DevAsh"
         },
         {
@@ -110,14 +110,14 @@ export default {
           image: require("../assets/portfolioImages/rm.png"),
           title: "R M Traders",
           subTitle:
-            "an Admin app to maintain a agricultural and financial accounts to make their life easier",
+            "An admin app that maintain a agricultural and financial bussiness.",
           link: "https://github.com/Git-Ashwin/R_M_Traders.git"
         },
         {
           image: require("../assets/portfolioImages/rec.png"),
           title: "Rec Mech",
           subTitle:
-            "App to maintain a library stocks with simple qr scane and also helps to monitor student activites",
+            "App to maintain a library stocks with qr scan and also helps to monitor student activites",
           link: "https://github.com/Git-Ashwin/recmechlib.git"
         }
       ]
