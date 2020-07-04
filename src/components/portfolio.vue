@@ -110,7 +110,7 @@ export default {
           image: require("../assets/portfolioImages/rm.png"),
           title: "R M Traders",
           subTitle:
-            "An admin app to maintain a agricultural and financial bussiness.",
+            "An admin app that helps to maintain a agricultural and financial records to make a life easier",
           link: "https://github.com/Git-Ashwin/R_M_Traders.git"
         },
         {
