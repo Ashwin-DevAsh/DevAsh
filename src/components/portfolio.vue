@@ -88,7 +88,7 @@ export default {
           image: require("../assets/portfolioImages/farmtohome.png"),
           title: "Farm To Home",
           subTitle:
-            "Aa app to connect farmers and a consumers directly with out a middle men and helps farmers to sell their agricultural goods",
+            "App to connect farmers and a consumers directly with out a middle men and helps farmers to sell their agricultural goods",
           link: "https://github.com/Ashwin-DevAsh"
         },
         {
@@ -110,7 +110,7 @@ export default {
           image: require("../assets/portfolioImages/rm.png"),
           title: "R M Traders",
           subTitle:
-            "An admin app that maintain a agricultural and financial bussiness.",
+            "An admin app to maintain a agricultural and financial bussiness.",
           link: "https://github.com/Git-Ashwin/R_M_Traders.git"
         },
         {
