@@ -19,10 +19,6 @@
       clickMode="push"
     ></vue-particles>
 
-    <div style="height:100%;display:flex;flex-direction:column-reverse">
-      <div style="height:20px;" class="page2"></div>
-    </div>
-
     <nav class="navBar" v-bind:class="{ scrolled: isScrolled }">
       <div id="logo-container">
         <div class="logo" :class="{ 'shake-animation': shakeThis }">
@@ -40,34 +36,19 @@
       </div>
 
       <div class="menu-container" :class="{ menuOpen: isMenuOpen }">
-        <div
-          v-on:click="scroll('.header-container')"
-          :class="{ selected: currentPage == 1 }"
-        >
+        <div v-on:click="scroll('.header-container')" :class="{ selected: currentPage == 1 }">
           <h5>Home</h5>
         </div>
-        <div
-          v-on:click="scroll('.page2')"
-          :class="{ selected: currentPage == 2 }"
-        >
+        <div v-on:click="scroll('.page2')" :class="{ selected: currentPage == 2 }">
           <h5>Services</h5>
         </div>
-        <div
-          v-on:click="scroll('.page3')"
-          :class="{ selected: currentPage == 3 }"
-        >
+        <div v-on:click="scroll('.page3')" :class="{ selected: currentPage == 3 }">
           <h5>Portfolio</h5>
         </div>
-        <div
-          v-on:click="scroll('.page4')"
-          :class="{ selected: currentPage == 4 }"
-        >
+        <div v-on:click="scroll('.page4')" :class="{ selected: currentPage == 4 }">
           <h5>About</h5>
         </div>
-        <div
-          v-on:click="scroll('.page5')"
-          :class="{ selected: currentPage == 5 }"
-        >
+        <div v-on:click="scroll('.page5')" :class="{ selected: currentPage == 5 }">
           <h5>Contact</h5>
         </div>
       </div>
@@ -110,7 +91,7 @@ export default {
       isScrolled: false,
       currentPage: 1,
       isMenuOpen: false,
-      shakeThis: false,
+      shakeThis: false
     };
   },
   methods: {
@@ -170,8 +151,8 @@ export default {
           that.shakeThis = undefined;
         }, 1000);
       }, 5000);
-    },
-  },
+    }
+  }
 };
 </script>
 

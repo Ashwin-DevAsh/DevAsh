@@ -1,5 +1,7 @@
 <template>
   <div class="service">
+    <div style="margin-top:-70px" class="page2"></div>
+
     <div class="heading">
       <h1>Services We Are Offering</h1>
       <div class="underline"></div>
@@ -21,7 +23,6 @@
         </div>
       </div>
     </div>
-    <div style="position:relative;bottom:-70px" class="page3"></div>
   </div>
 </template>
 
