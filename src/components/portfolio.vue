@@ -113,14 +113,14 @@ export default {
           title: "R M Traders",
           subTitle:
             "An admin app that helps to maintain a agricultural and financial records to make a life easier",
-          link: "https://github.com/Git-Ashwin/R_M_Traders.git"
+          link: "https://github.com/Ashwin-DevAsh"
         },
         {
           image: require("../assets/portfolioImages/rec.png"),
           title: "Rec Mech",
           subTitle:
             "App to maintain a library stocks with qr scan and also helps to monitor student activites",
-          link: "https://github.com/Git-Ashwin/recmechlib.git"
+          link: "https://github.com/Ashwin-DevAsh"
         }
       ]
     };
