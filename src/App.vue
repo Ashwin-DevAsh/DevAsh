@@ -36,6 +36,7 @@ export default {
 
 <style>
 html {
+  -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth;
 }
 
