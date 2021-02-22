@@ -130,7 +130,7 @@ h5 {
   display: grid;
   grid-template-columns: 40% 40%;
   justify-content: space-around;
-  row-gap: 50px;
+  row-gap: 75px;
   margin-bottom: 75px;
   grid-auto-rows: 200px;
 }
@@ -145,7 +145,7 @@ h5 {
   background: #ffffff;
   border-top-right-radius: 40px;
   border-bottom-left-radius: 40px;
-  /* box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; */
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
   overflow: hidden;
   display: grid;
   grid-template-columns: 30% 70%;
@@ -243,7 +243,7 @@ h6 {
   }
   .service-container {
     grid-template-columns: 90%;
-    row-gap: 25px;
+    row-gap: 50px;
   }
 
   .heading h1 {
