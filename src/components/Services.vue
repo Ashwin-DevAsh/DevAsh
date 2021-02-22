@@ -128,11 +128,11 @@ h5 {
 .service-container {
   height: 100%;
   display: grid;
-  grid-template-columns: 40% 40%;
+  grid-template-columns: 30% 30% 30%;
   justify-content: space-around;
-  row-gap: 50px;
-  margin-bottom: 75px;
-  grid-auto-rows: 200px;
+  row-gap: 100px;
+  margin-bottom: 100px;
+  grid-auto-rows: 250px;
 }
 
 .service-holder {
@@ -145,7 +145,7 @@ h5 {
   background: #ffffff;
   border-top-right-radius: 40px;
   border-bottom-left-radius: 40px;
-  /* box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; */
+  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
   overflow: hidden;
   display: grid;
   grid-template-columns: 30% 70%;
@@ -243,7 +243,7 @@ h6 {
   }
   .service-container {
     grid-template-columns: 90%;
-    row-gap: 25px;
+    row-gap: 50px;
   }
 
   .heading h1 {
