@@ -98,6 +98,7 @@ export default {
   display: flex;
   height: auto;
   height: 200px;
+  margin: 50px 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -127,11 +128,11 @@ h5 {
 .service-container {
   height: 100%;
   display: grid;
-  grid-template-columns: 30% 30% 30%;
+  grid-template-columns: 40% 40%;
   justify-content: space-around;
   row-gap: 50px;
-  margin-bottom: 50px;
-  grid-auto-rows: 180px;
+  margin-bottom: 100px;
+  grid-auto-rows: 250px;
 }
 
 .service-holder {
@@ -144,7 +145,7 @@ h5 {
   background: #ffffff;
   border-top-right-radius: 40px;
   border-bottom-left-radius: 40px;
-  box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+  /* box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff; */
   overflow: hidden;
   display: grid;
   grid-template-columns: 30% 70%;
@@ -226,6 +227,7 @@ h6 {
 }
 .list-title-container h6 {
   margin: 5px;
+  line-height:20px;
   opacity: 0.6;
 }
 

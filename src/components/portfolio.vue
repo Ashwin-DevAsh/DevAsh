@@ -22,7 +22,7 @@
           :per-page="1"
           :autoplay="true"
           :loop="true"
-          :autoplayTimeout="5000"
+          :autoplayTimeout="15000"
           :mouse-drag="true"
           :navigationEnabled="true"
           :paginationEnabled="true"
