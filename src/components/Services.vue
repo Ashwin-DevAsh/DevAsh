@@ -131,8 +131,8 @@ h5 {
   grid-template-columns: 40% 40%;
   justify-content: space-around;
   row-gap: 50px;
-  margin-bottom: 100px;
-  grid-auto-rows: 250px;
+  margin-bottom: 75px;
+  grid-auto-rows: 200px;
 }
 
 .service-holder {
