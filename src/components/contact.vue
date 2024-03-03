@@ -36,7 +36,7 @@ export default {
       socialLinks: [
         {
           image: require("../assets/social/linkedin.svg"),
-          link: "https://www.linkedin.com/in/ashwin-r-a7234017a"
+          link: "https://www.linkedin.com/in/ashwin-r-sde"
         },
         {
           image: require("../assets/social/insta.svg"),
@@ -48,7 +48,7 @@ export default {
         },
         {
           image: require("../assets/github.svg"),
-          link: "https://www.github.com/Ashwin-DevAsh"
+          link: "https://www.github.com/"
         }
       ]
     };
