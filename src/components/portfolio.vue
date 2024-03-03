@@ -91,14 +91,14 @@ export default {
           title: "Farm To Home",
           subTitle:
             "App to connect farmers and a consumers directly with out a middle men and helps farmers to sell their agricultural goods",
-          link: "https://github.com/Ashwin-DevAsh"
+          link: "https://github.com/"
         },
         {
           image: require("../assets/portfolioImages/recwallet.png"),
           title: "Rec Wallet",
           subTitle:
             "Blockchain based cryptocurrency app build on top of our own private ledger system.",
-          link: "https://github.com/Ashwin-DevAsh/Rec-Wallet-Client.git"
+          link: "https://github.com/"
         },
 
         {
@@ -106,21 +106,21 @@ export default {
           title: "Sway",
           subTitle:
             "A fully functional kiosk solution for a enterprise which enables to access a client devices remotely",
-          link: "https://github.com/Ashwin-DevAsh"
+          link: "https://github.com/"
         },
         {
           image: require("../assets/portfolioImages/rm.png"),
-          title: "R M Traders",
+          title: "Agro Traders",
           subTitle:
             "An admin app that helps to maintain a agricultural and financial records to make a life easier",
-          link: "https://github.com/Ashwin-DevAsh"
+          link: "https://github.com/"
         },
         {
           image: require("../assets/portfolioImages/rec.png"),
-          title: "Rec Mech",
+          title: "rMech",
           subTitle:
             "App to maintain a library stocks with qr scan and also helps to monitor student activites",
-          link: "https://github.com/Ashwin-DevAsh"
+          link: "https://github.com"
         }
       ]
     };
